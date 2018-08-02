@@ -1,3 +1,18 @@
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
+
 HTML5  es la última versión de HTML. El término representa dos conceptos diferentes:
 
 Se trata de una nueva versión de HTML, con nuevos elementos, atributos y comportamientos.
